@@ -4,13 +4,17 @@
 * For details, see http://www.apache.org/licenses/LICENSE-2.0.
 */
 
+/* My Styles */
+.payment {
+	white-space: pre-line;
+	text-align: left;
+	padding-left: 0 !important;
+}
+
 /* Toggle Styles */
 
 #wrapper {
 	padding-left: 0;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 
@@ -28,9 +32,6 @@
 	overflow-y: auto;
 	color: #f1f1f1;
 	background: #111;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 
@@ -74,7 +75,7 @@
 .sidebar-nav li a:hover {
 	text-decoration: none;
 	color: #fff;
-	background: rgba(255,255,255,0.2);
+	background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -82,17 +83,17 @@
 	text-decoration: none;
 }
 
-.sidebar-nav > .sidebar-brand {
+.sidebar-nav>.sidebar-brand {
 	height: 65px;
 	font-size: 18px;
 	line-height: 60px;
 }
 
-.sidebar-nav > .sidebar-brand a {
+.sidebar-nav>.sidebar-brand a {
 	color: #999999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
+.sidebar-nav>.sidebar-brand a:hover {
 	color: #fff;
 	background: none;
 }
@@ -131,6 +132,7 @@
 	#page-content-wrapper {
 		padding-top: 30px;
 	}
+
 	#sidebar-wrapper {
 		position: relative;
 		left: 0;
@@ -138,11 +140,13 @@
 		margin-left: 0;
 		top: 0;
 	}
+
 	.sidebar-inner h3 {
 		margin-top: 0;
 		padding-top: 0;
 		text-align: center;
 	}
+
 	.sidebar-description {
 		text-align: center;
 	}
@@ -156,13 +160,16 @@ body {
 	background-color: #f1f1f1;
 	transition: background-color .25s ease;
 }
+
 .btn,
 .form-control {
 	border-radius: 0px;
 }
+
 .sidebar-inner {
 	padding: 30px;
 }
+
 .sidebar-about {
 	display: none;
 	position: absolute;
@@ -170,37 +177,44 @@ body {
 	bottom: 30px;
 	right: 30px;
 }
+
 .sidebar-about a {
 	color: #fff;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
+
 .sidebar-about hr {
 	border-top: 5px solid #444;
 }
+
 .sidebar-about .glyphicon-heart {
 	color: #c0392b;
 }
+
 #contract .item {
 	background-color: #fff;
 	padding: 0.1em 0.25em;
 	box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 }
+
 #contract .item-editing {
 	background-color: #FFFACD;
 	border-bottom: 2px solid;
 }
+
 @media (min-height: 830px) {
 	.sidebar-about {
 		display: block;
 	}
 }
+
 .form-control:focus {
 	background-color: #FFFACD;
 	border-color: #FFFACD;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 250, 205, .6);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 250, 205, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 250, 205, .6);
 }
+
 .input-group-court .input-group-addon {
 	cursor: pointer;
 }
@@ -232,7 +246,6 @@ MENU TOGGLE SWITCHES
 	border-radius: none;
 	border: none;
 	cursor: pointer;
-	-webkit-transition: background 0.3s;
 	transition: background 0.3s;
 }
 
@@ -280,25 +293,20 @@ MENU TOGGLE SWITCHES
 }
 
 .cmn-toggle-switch__htx span {
-	-webkit-transition: background 0s 0.3s;
 	transition: background 0s 0.3s;
 }
 
 .cmn-toggle-switch__htx span::before,
 .cmn-toggle-switch__htx span::after {
-	-webkit-transition-duration: 0.3s, 0.3s;
 	transition-duration: 0.3s, 0.3s;
-	-webkit-transition-delay: 0.3s, 0s;
 	transition-delay: 0.3s, 0s;
 }
 
 .cmn-toggle-switch__htx span::before {
-	-webkit-transition-property: top, -webkit-transform;
 	transition-property: top, transform;
 }
 
 .cmn-toggle-switch__htx span::after {
-	-webkit-transition-property: bottom, -webkit-transform;
 	transition-property: bottom, transform;
 }
 
@@ -313,20 +321,15 @@ MENU TOGGLE SWITCHES
 
 .cmn-toggle-switch__htx.active span::before {
 	top: 0;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 
 .cmn-toggle-switch__htx.active span::after {
 	bottom: 0;
-	-webkit-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
 .cmn-toggle-switch__htx.active span::before,
 .cmn-toggle-switch__htx.active span::after {
-	-webkit-transition-delay: 0s, 0.3s;
 	transition-delay: 0s, 0.3s;
 }

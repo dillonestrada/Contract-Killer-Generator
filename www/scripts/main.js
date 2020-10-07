@@ -1,13 +1,14 @@
-jQuery(document).ready(function ($) {
+$(document).ready(function () {
 
 	var form = $('#form-customize'),
 		contract = $('#contract');
+
 
 	form.on('submit', function (e) {
 		e.preventDefault();
 
 		// Copy the required stuff (style and encoding)
-		$('.inc_pdf').clone().addClass('temporary').prependTo('#contract');
+		// $('.inc_pdf').clone().addClass('temporary').prependTo('#contract');
 
 		// Get the outerHTML
 		var html = contract.prop('outerHTML');
@@ -26,10 +27,14 @@ jQuery(document).ready(function ($) {
 			});
 
 		// Remove the files we appended earlier on (to restore the screen style)
-		contract.find('.temporary').remove();
+		// contract.find('.temporary').remove();
 
-		// Open PDF in new window
-		doc.output('dataurlnewwindow');
+		let d = new Date();
+		let time = d.getTime();
+		// setTimeout(function () {
+		// 	doc.save(`${time}.pdf`)
+		// }, 2000)
+		doc.save(`${time}.pdf`)
 	});
 
 	/*
@@ -69,18 +74,6 @@ jQuery(document).ready(function ($) {
 		contract.find('.logo').attr('src', event.fpfile.url).removeClass('hide');
 	});
 	$('.btn-fp').attr('tabIndex', '-1');
-
-	/*
-	Geolocation
-	http://www.telize.com/
-	 */
-	form.on('click', '#locateme', function (event) {
-		event.preventDefault();
-		$('input[name="court"]').val('Searching location...');
-		$.getJSON('//geoip.nekudo.com/api', function (geodata) {
-			$('input[name="court"]').val(geodata.city).change();
-		});
-	});
 
 	/*
 	Media Queries
